@@ -1,0 +1,22 @@
+# Core numerical stack
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+
+# Embeddings
+torch>=2.1
+transformers>=4.40
+
+# Needed by a number of HF tokenizers / sentencepiece-based models.
+protobuf>=3.20
+sentencepiece>=0.1.99
+
+# Tokenisation (spaCy) — pinned to avoid pydantic v2 incompatibilities
+spacy>=3.7,<3.8
+pydantic<2
+
+# Persistent homology
+gudhi>=3.9
+
+# Convenience
+tqdm>=4.66
