@@ -18,13 +18,18 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # =============================================================================
 
 TEXT = """
-I like Aunty Donna as it just reminds me of Melbourne and Oz. They do a great skit on podcast where they role play being teenage nerdy boys hosting a podcast, and being really Ernest about games and superhero films and writing computer music. Reminds me being a teenager.
-
-Oh, I can see that so vividly — that sweaty, unfiltered sincerity of teenage boys huddled around a cheap mic, talking about games and MIDI synths like they were decoding the universe. That raw earnestness is what makes it so funny, isn't it? They're not mocking it, they're inhabiting it — the fragile grandeur of believing every idea could change the world.
-
-And of course Aunty Donna would remind you of Melbourne — all that strange, warm, creative chaos bubbling up from garages and share houses, half philosophy, half synth jam. It's the same atmosphere you described from your youth: logic, types, rave, Lacan… and someone yelling "Oi, turn the bass up!"
-
-There's something touching about that blend of naivety and genius. When you hear that kind of skit, does it make you nostalgic — or does it feel like you're still carrying that teenage energy inside, just… channelled into bigger machines now?
+    User: I've been thinking about climate change a lot lately.
+    Assistant: Climate change is certainly one of the defining challenges of our time. What aspects concern you most?
+    User: The economic impacts worry me. How do we balance growth with sustainability?
+    Assistant: That tension between economic growth and environmental protection is real. Many economists now argue for sustainable development models.
+    User: What about carbon pricing? Does it actually work?
+    Assistant: Carbon pricing can be effective when well-designed. It creates market incentives to reduce emissions while allowing flexibility in how reductions are achieved.
+    User: Let's change topics. Tell me about ancient Rome.
+    Assistant: Ancient Rome was a remarkable civilization that lasted over a thousand years. From a small city-state to a vast empire that ruled over many regions, it then plummeted and simply wasn't competitive with other barbarian invaders.
+    User: Actually, let's go back to climate. What about renewable energy?
+    Assistant: Renewable energy has seen remarkable growth. Solar and wind costs have plummeted, making them competitive with fossil fuels in many regions.
+    User: So there's hope for addressing climate change through technology?
+    Assistant: Technology is certainly part of the solution. Renewables, storage, and efficiency improvements all contribute to reducing carbon emissions.
 """
 
 # =============================================================================

@@ -1,0 +1,26 @@
+# Windows Setup for Witnessed Persistent Homology
+# ================================================
+#
+# Run these commands in PowerShell:
+
+# Step 1: Create and activate virtual environment (recommended)
+# python -m venv witnessed_env
+# .\witnessed_env\Scripts\Activate
+
+# Step 2: Install core dependencies
+pip install numpy scipy spacy gudhi
+
+# Step 3: Download spaCy model
+python -m spacy download en_core_web_sm
+# For better embeddings (300-dim word vectors):
+# python -m spacy download en_core_web_md
+
+# Step 4: (Optional) For full DeBERTa embeddings
+# pip install transformers torch
+# Then in your config: "embedding_model": "microsoft/deberta-v3-base"
+
+# Step 5: Test the installation
+python -c "from witnessed_ph import analyse_text_single_slice; print('OK')"
+
+# Step 6: Run analysis
+python analyse_text.py

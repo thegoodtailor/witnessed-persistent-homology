@@ -1,0 +1,45 @@
+WINDOWS POWERSHELL SETUP - Witnessed PH Temporal
+=================================================
+
+Step 1: Extract zip
+-------------------
+Expand-Archive witnessed_ph_temporal_v2.zip -DestinationPath .
+cd witnessed_ph_temporal_v2
+
+Step 2: Create virtual environment  
+-----------------------------------
+python -m venv witnessed_env
+.\witnessed_env\Scripts\Activate
+
+Step 3: Install dependencies
+----------------------------
+pip install numpy scipy spacy gudhi
+
+Step 4: Download spaCy model (optional but recommended)
+-------------------------------------------------------
+python -m spacy download en_core_web_sm
+
+Step 5: Run the example
+-----------------------
+python run_temporal.py
+
+Expected output:
+- Theme Score visualization showing bars across time slices
+- Journey timelines showing how themes evolve
+- Statistics on carries, drifts, ruptures, re-entries
+
+Note on lightweight mode:
+------------------------
+By default, the package runs in "lightweight mode" using hash-based
+embeddings. This means semantic matching is limited - you'll see mostly
+ruptures rather than carries/drifts.
+
+For full-quality mode with semantic matching:
+--------------------------------------------
+pip install transformers torch
+# Then edit witnessed_ph/embedding.py to change:
+#   "embedding_model": "spacy"
+# to:
+#   "embedding_model": "microsoft/deberta-v3-base"
+
+This requires ~500MB of model downloads and more memory.

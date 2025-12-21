@@ -1,0 +1,27 @@
+# Witnessed Persistent Homology - Requirements
+# =============================================
+# 
+# Core dependencies (lightweight mode):
+numpy>=1.20
+scipy>=1.7
+spacy>=3.5
+gudhi>=3.8
+
+# For full quality embeddings (optional, large download):
+# transformers>=4.30
+# torch>=2.0
+
+# For visualization (optional):
+# matplotlib>=3.5
+# umap-learn>=0.5
+# scikit-learn>=1.0
+
+# Installation:
+# -------------
+# 1. pip install -r requirements.txt
+# 2. python -m spacy download en_core_web_sm
+#    (or en_core_web_md for word vectors)
+#
+# For full DeBERTa embeddings:
+# pip install transformers torch
+# Then in config set: "embedding_model": "microsoft/deberta-v3-base"
